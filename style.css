@@ -187,15 +187,18 @@ h1, h2, h3, h4, h5, h6, p, table {
 	table tr{
 		border-top: 1px solid #000000;
 	}
-	table tr:nth-child(3){
+    table tr .start {
+		border-top: 1px solid #000;
+    }
+    table tr:nth-child(4) {
 		border-top: none;
-	}
-	table tr:nth-child(5){
+    }
+    table tr:nth-child(6) {
 		border-top: none;
-	}
-	table tr:nth-child(7){
+    }
+    table tr:nth-child(8) {
 		border-top: none;
-	}
+    }
 	table #last{
 		border-bottom: 1px solid #000000;
 	}
@@ -377,15 +380,6 @@ h1, h2, h3, h4, h5, h6, p, table {
 	table tr{
 		border-top: 1px solid #000000;
 	}
-	table tr:nth-child(3){
-		border-top: none;
-	}
-	table tr:nth-child(5){
-		border-top: none;
-	}
-	table tr:nth-child(7){
-		border-top: none;
-	}
 	table #last{
 		border-bottom: 1px solid #000000;
 	}
@@ -559,15 +553,6 @@ h1, h2, h3, h4, h5, h6, p, table {
 	}
 	table tr{
 		border-top: 1px solid #000000;
-	}
-	table tr:nth-child(3){
-		border-top: none;
-	}
-	table tr:nth-child(5){
-		border-top: none;
-	}
-	table tr:nth-child(7){
-		border-top: none;
 	}
 	table #last{
 		border-bottom: 1px solid #000000;
