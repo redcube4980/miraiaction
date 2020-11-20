@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>ミライActionDay</title>
+    <!--[if lt IE 9]>-->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]
+	<link rel="shortcut icon" href="#">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+	</header>
+<!-- /main -->
+<main>
+	<p id="titlebox">
+		<img class="maintitlepc" src="images/maintitlepc.png">
+		<img class="maintitlesp" src="images/maintitlesp.png">
+	</p>
+	<div id="videobox">
+<div id="player"></div>
+	</div>
+<div>
+	<h3>地球はかつてシミュレーションされた<br class="kaigyou">悪いシナリオへ向かっている！？<br>
+	止まらない温暖化が<br class="kaigyou">地球にもたらしている影響とは？<br>
+	そして、世界中から響く動物たちからの<br class="kaigyou">S.O.Sとは？<br>
+	地球規模の環境問題、<br>
+	温暖化という側面から生物多様性を考えよう！
+	</h3>
+	<div class="tablebox">
+		<h2>タイムスケジュール</h2>
+	<table>
+		<tr>
+			<td class="time">14：20</td>
+			<td class="content">中継開始</td>
+		</tr>
+		<tr>
+			<td class="time">14：30</td>
+			<td class="content">開会のご挨拶</td>
+		</tr>
+		<tr id="first">
+			<td class="time" rowspan="1">14：40</td>
+			<td class="content"><h4>第１部</h4> <h5>SPECIAL STAGE</h5>
+				<h1>止まらぬ温暖化といきものたちのS.O.S</h1>
+			</td>
+			<td class="tableimg">
+				<img class="pc" src="images/seibutsupc.png">
+				<img class="sp" src="images/seibutsusp.png">
+			</td>
+		</tr>
+		<tr>
+			<td class="time"></td>
+			<td colspan="2">
+				<p>異常な猛暑、増え続ける大型台風、ゲリラ豪雨。いよいよ実感を伴うまでに深刻化してきた温暖化は、生物多様性にも破滅的な影響を及ぼしている…？地球環境を大きく変えてしまいかねない温暖化の及ぼす生態系への脅威に迫ります。</p>
+			</td>
+		</tr>
+		<tr id="second">
+			<td class="time" rowspan="1">15：10</td>
+			<td class="content"><h4>第２部</h4>
+				<h1>知多半島ナウReport</h1>
+			</td>
+			<td class="tableimg">
+				<img class="pc" src="images/image01.jpg">
+				<img class="sp" src="images/image01sp.jpg">
+			</td>
+		</tr>
+		<tr>
+			<td class="time"></td>
+			<td colspan="2">
+				<p>深刻化する温暖化は、知多半島にどんな影響を及ぼしているのか？そして、その変化に立ち向かうために何ができるのか？知多半島での実態と取組に迫ります。</p>
+			</td>
+		</tr>
+		<tr id="third">
+			<td class="time" rowspan="1">16：10</td>
+			<td class="content"><h4>第３部</h4>
+				<h1>知多半島ミライAction</h1>
+			</td>
+			<td class="tableimg">
+				<img class="pc" src="images/image02.jpg">
+				<img class="sp" src="images/image02sp.jpg">
+			</td>
+		</tr>
+		<tr>
+			<td class="time"></td>
+			<td colspan="2">
+				<p>知多半島で環境活動に取り組む若者団体から大人世代に向けて、自分たちの取組発表や未来へ向けた提言などを行います。</p>
+			</td>
+		</tr>
+		<tr id="last">
+			<td class="time">16：50</td>
+			<td class="content">中継終了</td>
+		</tr>
+	</table>
+	<p class="sponsor">主催：大同大学地域環境調査研究センター　<br class="kaigyou">共催：知多半島生態系ネットワーク協議会　<br>
+		協力：NPO法人日本エコロジスト支援協会/命をつなぐPROJECT学生実行委員会<br>
+		制作協力：レッドキューブ株式会社</p>
+	</div>
+	<div id="border-box">
+		-推奨環境-<br>
+		※きれいな映像で見るには光回線やWifiなどの高速通信環境が必要です。<br>
+		※視聴に要する通信料はお客様ご負担となります。映像の視聴は通信量が大きいため、<br>
+		通信料が高額になる可能性がありますので、定額制の通信プランをご契約の上、ご視聴ください。<br>
+		※当日の回線状況や予期せぬ機材トラブルにより生中継が満足に放送できない場合もございますのでご了承ください
+	</div>
+</main>
+<!-- /footer -->
+	<footer>
+		<div class="footer1">
+		<h6>Supported by</h6>
+		</div>
+		<div class="footer2">
+		<a href="http://cube-group.jp/" target="_blank"><img src="images/redcubelogo.png"></a>
+		</div>
+	</footer>
+</div>
+</body>
+<script>
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+player = new YT.Player('player', {
+height: '503',
+    width: '894',
+    videoId: 'hjQUD073o0M',
+wmode: 'transparent',
+playerVars:{
+'loop': '1',
+'playlist': '',
+'rel': '0',
+'showinfo': '0',
+'color': 'white',
+'playsinline':'1' // インライン再生を指定
+},
+events: {
+'onReady': onPlayerReady,
+'onStateChange': onPlayerStateChange
+}
+});
+}
+function onPlayerReady(event) {
+event.target.playVideo();
+event.target.mute();
+}
+function onPlayerStateChange(event) {
+}
+</script>
+</html>
